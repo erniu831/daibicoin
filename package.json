@@ -1,0 +1,22 @@
+{
+  "name": "daibicoin",
+  "version": "1.0.0",
+  "description": " daibicoin is a cryptocurrency like Bitcoin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erniu831/daibicoin.git"
+  },
+  "author": "jya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erniu831/daibicoin/issues"
+  },
+  "homepage": "https://github.com/erniu831/daibicoin#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
