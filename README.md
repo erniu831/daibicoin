@@ -2,7 +2,7 @@
 呆币——block chain
 
 ## What is DaiBicoin? – Such coin
-DaiBicoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). 
+DaiBicoin is a cryptocurrency like Bitcoin, it does use SHA256 as its proof of work (POW).
 
 ~~http://daibicoin.com/~~    (Please wait)
 

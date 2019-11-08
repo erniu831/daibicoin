@@ -1,3 +1,8 @@
+/*
+*   develop by jya831
+*   DaiBicoin is a blockchain like BTC , used by SHA256
+*
+* */
 const SHA256 = require("crypto-js/sha256");
 class Block {
     constructor(index, timestamp, data, previousHash = '') {
@@ -6,16 +11,24 @@ class Block {
         this.timestamp = timestamp;
         this.data = data;
         this.hash = this.calculateHash();
+        this.nonce = 0;
     }
     calculateHash() {
-        return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();
+        return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data) + this.nonce).toString();
+    }
+    mineBlock(difficulty) {
+        while (this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
+            this.nonce++;
+            this.hash = this.calculateHash();
+        }
+        console.log("BLOCK MINED: " + this.hash);
     }
 }
-
 
 class Blockchain{
     constructor() {
         this.chain = [this.createGenesisBlock()];
+        this.difficulty = 2;
     }
     createGenesisBlock() {
         return new Block(0, "01/01/2019", "Genesis block", "0");
@@ -25,7 +38,7 @@ class Blockchain{
     }
     addBlock(newBlock) {
         newBlock.previousHash = this.getLatestBlock().hash;
-        newBlock.hash = newBlock.calculateHash();
+        newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
     }
     isChainValid() {
