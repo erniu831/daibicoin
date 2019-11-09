@@ -1,5 +1,5 @@
 # DaiBicoin [DB]
-呆币——block chain
+呆币
 
 ## What is DaiBicoin? – Such coin
 DaiBicoin is a cryptocurrency like Bitcoin, it does use SHA256 as its proof of work (POW).
