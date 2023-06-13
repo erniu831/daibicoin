@@ -18,6 +18,6 @@
   "homepage": "https://github.com/erniu831/daibicoin#readme",
   "dependencies": {
     "bignumber": "^1.1.0",
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.2.1"
   }
 }
